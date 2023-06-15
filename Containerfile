@@ -2,8 +2,8 @@ FROM python:3.7-alpine
 COPY . /app
 WORKDIR /app
 RUN pip install .
-RUN project_name create-db
-RUN project_name populate-db
-RUN project_name add-user -u admin -p admin
+RUN ai_demo create-db
+RUN ai_demo populate-db
+RUN ai_demo add-user -u admin -p admin
 EXPOSE 5000
-CMD ["project_name", "run"]
+CMD ["ai_demo", "run"]
